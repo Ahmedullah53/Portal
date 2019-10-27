@@ -12,8 +12,21 @@ import PositiveScreen from './screens/feedbacks/PositiveScreen';
 import NegativeScreen from './screens/feedbacks/NegativeScreen';
 import PendingScreen from './screens/feedbacks/PendingScreen';
 import DroppedScreen from './screens/feedbacks/DroppedScreen';
-import Login from './screens/Login';
-import Register from './screens/Register'
+import Login from './Login';
+import Register from './Register'
+
+const AppNavigator = createStackNavigator(
+  {
+    'Home':HomeScreen,
+    'TotalComplaints':TotalScreen,
+    'OpenComplaints':OpenScreen,
+    'ClosedComplaints':ClosedScreen,
+    'PositiveFeedbacks':PositiveScreen,
+    'NegativeFeedbacks':NegativeScreen,
+    'PendingFeedbacks':PendingScreen,
+    'DroppedComplaints':DroppedScreen,
+  }
+)
 
 const Home = createStackNavigator(
   {
@@ -76,7 +89,6 @@ const AppDrawerNavigator = createDrawerNavigator(
     'PendingFeedbacks':PendingFeedbacks,
     'DroppedComplaints':DroppedComplaints,
   }
-   
 )
 
 const AppDrawerContainer = createAppContainer(AppDrawerNavigator)
